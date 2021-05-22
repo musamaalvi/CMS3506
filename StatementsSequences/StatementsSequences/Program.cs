@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Tracing;
 
 namespace StatementsSequences
 {
@@ -8,9 +9,116 @@ namespace StatementsSequences
         {
 
 
-            TooHighTooLow();
+            Palindrome();
         }
 
+        static void Palindrome()
+        {
+            Console.WriteLine("Enter word");
+            string word = Console.ReadLine();
+            string reverseWord = "";
+            for (int i = word.Length; i > 0; i--) 
+            {
+                reverseWord += word[i-1].ToString();
+            }
+            if (reverseWord == word)  
+            {
+                Console.WriteLine("Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Not Palindrome");
+            }
+        }
+        static void TimeOfDay()
+        {
+            Console.WriteLine("Enter hours, minutes, seconds");
+            int hours = Convert.ToInt32(Console.ReadLine());
+            int minutes = Convert.ToInt32(Console.ReadLine());
+            int seconds = Convert.ToInt32(Console.ReadLine());
+            TimeSpan mySpan = new TimeSpan(hours, minutes, seconds);
+            Console.WriteLine("Seconds since mignight " + mySpan.TotalSeconds);
+        }
+
+        static void VAT()
+        {
+            Console.WriteLine("Enter price");
+            double price = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter VAT");
+            double VAT = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Final price " + ((price*VAT/100) + price));
+        }
+        static void ProductDisplay()
+        {
+            Console.WriteLine("Enter two numbers");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Product is " + num1 * num2);
+        }
+        static void AskName()
+        {
+            Console.WriteLine("Enter Name");
+            string name = Console.ReadLine();
+            PrintName(name);
+        }
+        static void PrintName(string name)
+        {
+            Console.WriteLine("Name is " + name);
+        }
+        static void SeperateArrays()
+        {
+            int[] myNum = { 10, 20, 30, 40, 41, 21, 31, 51 };
+            int[] evenArray = new int[4];
+            int[] oddArray = new int[4];
+            int evenCounter = 0;
+            int oddCounter = 0;
+
+            foreach(int num in myNum)
+            {
+                if (num % 2 == 0)
+                {
+                    evenArray[evenCounter] = num;
+                    evenCounter++;
+                }
+                else
+                {
+                    oddArray[oddCounter] = num;
+                    oddCounter++;
+                }
+            }
+            Console.WriteLine("Even array");
+            foreach(int num in evenArray) { Console.WriteLine(num); }
+            Console.WriteLine("Odd array");
+            foreach (int num in oddArray) { Console.WriteLine(num); }
+
+        }
+        static void ArraysSum()
+        {
+            int[] myNum = { 10, 20, 30, 40 };
+            int sum = 0; 
+            foreach (int num in myNum)
+            {
+                sum = sum + num;
+            }
+            Console.WriteLine(sum);
+        }
+        static void ArraysReverse()
+        {
+            int[] myNum = { 10, 20, 30, 40 };
+            for (int i = myNum.Length;i>0;i--)
+            {
+                Console.WriteLine(myNum[i-1]);
+            }
+        }
+        static void Arrays()
+        {
+            int[] myNum = { 10, 20, 30, 40 };
+            foreach(int num in myNum)
+            {
+                Console.WriteLine(num);
+            }
+        }
         static void TooHighTooLow()
         {
             Random _random = new Random();
