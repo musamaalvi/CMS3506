@@ -10,7 +10,43 @@ namespace StatementsSequences
         static void Main(string[] args)
         {
 
-            ShortProgram();
+            Celcius();
+        }
+
+        static void Celcius()
+        {
+            Console.WriteLine("Enter Celcius");
+            double valueToConvert = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine((valueToConvert * 1.8) + 32);
+        }
+
+        static void PoundToDolalr()
+        {
+            Console.WriteLine("Enter Pound");
+            
+            double exchangeRate = 1.4;
+            double DolalrvalueToBeConverted = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(exchangeRate * DolalrvalueToBeConverted);
+            return;
+        }
+        static void Faranheit()
+        {
+            Console.WriteLine("Enter Farenheit");
+            double valueToConvert = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine((valueToConvert - 32) / 1.8);
+        }
+
+
+     
+        static void AskName()
+        {
+            Console.WriteLine("Enter Name");
+            string name = Console.ReadLine();
+            PrintName(name);
+        }
+        static void PrintName(string name)
+        {
+            Console.WriteLine("Hello " + name);
         }
 
         static void ShortProgram()
@@ -111,16 +147,8 @@ namespace StatementsSequences
 
             Console.WriteLine("Product is " + num1 * num2);
         }
-        static void AskName()
-        {
-            Console.WriteLine("Enter Name");
-            string name = Console.ReadLine();
-            PrintName(name);
-        }
-        static void PrintName(string name)
-        {
-            Console.WriteLine("Name is " + name);
-        }
+       
+        
         static void SeperateArrays()
         {
             int[] myNum = { 10, 20, 30, 40, 41, 21, 31, 51 };
@@ -324,26 +352,8 @@ namespace StatementsSequences
 
         }
 
-        static void Celcius()
-        {
-            double valueToConvert = 55;
-            Console.WriteLine((valueToConvert*1.8)+32);
-        }
-
-        static void Faranheit()
-        {
-            double valueToConvert = 55;
-            Console.WriteLine((valueToConvert - 32)/1.8);
-        }
 
 
-        static void PoundToDolalr()
-        {
-            double exchangeRate = 1.4;
-            double DolalrvalueToBeConverted = 550;
-            Console.WriteLine(exchangeRate * DolalrvalueToBeConverted);
-            return;
-        }
 
         class Rectangle
         {
