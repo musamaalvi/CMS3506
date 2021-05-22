@@ -1,17 +1,72 @@
 ﻿using System;
 using System.Diagnostics.Tracing;
+using System.Drawing;
 
 namespace StatementsSequences
 {
+   
     class Program
     {
         static void Main(string[] args)
         {
 
-
-            Palindrome();
+            ShortProgram();
         }
 
+        static void ShortProgram()
+        {
+            Console.WriteLine("Press 1 for palindrome, 2 to play game, 3 to exit");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1)
+            {
+                Console.WriteLine("Enter word to check palidrome");
+                string word = Console.ReadLine();
+                CheckPalindrome(word);
+            }
+            else if (choice == 2)
+            {
+                Console.WriteLine("Guess random generated number in the range of 10 to 100");
+                TooHighTooLow();
+            }
+        }
+
+        static void CheckPalindrome(string word)
+        {
+            string reverseWord = "";
+            for (int i = word.Length; i > 0; i--)
+            {
+                reverseWord += word[i - 1].ToString();
+            }
+            if (reverseWord == word)
+            {
+                Console.WriteLine("Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Not Palindrome");
+            }
+        }
+        static void TooHighTooLow()
+        {
+            
+            Random _random = new Random();
+            int num = _random.Next(10, 100);
+            int guess;
+
+            while (true)
+            {
+                Console.WriteLine("Enter Guessed Number");
+                guess = Convert.ToInt32(Console.ReadLine());
+                if (guess < num) { Console.WriteLine("Too low"); }
+                else if (guess > num) { Console.WriteLine("Too high"); }
+                else { Console.WriteLine("Correct"); break; }
+            }
+        }
+        static void Rectanlg()
+        {
+            Rectangle rect = new Rectangle(10, 20);
+            Console.WriteLine("Area is " + rect.Area());
+        }
         static void Palindrome()
         {
             Console.WriteLine("Enter word");
@@ -119,21 +174,7 @@ namespace StatementsSequences
                 Console.WriteLine(num);
             }
         }
-        static void TooHighTooLow()
-        {
-            Random _random = new Random();
-            int num = _random.Next(10,100);
-            int guess;
 
-            while (true)
-            {
-                Console.WriteLine("Enter Guessed Number");
-                guess = Convert.ToInt32(Console.ReadLine());
-                if (guess < num) { Console.WriteLine("Too low"); }
-                else if (guess > num) { Console.WriteLine("Too high"); }
-                else { Console.WriteLine("Correct"); break; }
-            }
-        }
         static void NumberHalving()
         {
             Console.WriteLine("Enter Number");
@@ -302,6 +343,22 @@ namespace StatementsSequences
             double DolalrvalueToBeConverted = 550;
             Console.WriteLine(exchangeRate * DolalrvalueToBeConverted);
             return;
+        }
+
+        class Rectangle
+        {
+            int height;
+            int width;
+            public Rectangle(int _width, int _height)
+            {
+                width = _width;
+                height = _height;
+            }
+
+            public int Area()
+            {
+                return width * height;
+            }
         }
     }
 }
