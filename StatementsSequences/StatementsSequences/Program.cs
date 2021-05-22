@@ -8,7 +8,69 @@ namespace StatementsSequences
         {
 
 
-            ConvertToMonth();
+            TooHighTooLow();
+        }
+
+        static void TooHighTooLow()
+        {
+            Random _random = new Random();
+            int num = _random.Next(10,100);
+            int guess;
+
+            while (true)
+            {
+                Console.WriteLine("Enter Guessed Number");
+                guess = Convert.ToInt32(Console.ReadLine());
+                if (guess < num) { Console.WriteLine("Too low"); }
+                else if (guess > num) { Console.WriteLine("Too high"); }
+                else { Console.WriteLine("Correct"); break; }
+            }
+        }
+        static void NumberHalving()
+        {
+            Console.WriteLine("Enter Number");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int counter = 0;
+            while((num = num / 2) >= 1)
+            {
+                counter++;
+            }
+            Console.WriteLine(counter);
+
+        }
+
+        static void PrintAlphabets()
+        {
+            int number = 65;
+            char ch = (char)number;
+            for (int i = 0; i < 26; i+=2)
+            {
+                ch = (char)number;
+                Console.WriteLine(ch);
+                number+=2;
+            }
+        }
+        static void PrintAlphabetsBackward()
+        {
+            int number = 90;
+            char ch = (char)number;
+            for (int i = 0; i < 26; i++)
+            {
+                ch = (char)number;
+                Console.WriteLine(ch);
+                number--;
+            }
+        }
+        static void ConvertToChart()
+        {
+            int number = 65;
+            char ch = (char)number;
+            for(int i = 0; i < 26; i++)
+            {
+                ch = (char)number;
+                Console.WriteLine(ch);
+                number++;
+            }
         }
         static void ConvertToMonth()
         {

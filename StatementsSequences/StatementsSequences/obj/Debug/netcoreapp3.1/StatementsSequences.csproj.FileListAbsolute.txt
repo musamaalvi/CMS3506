@@ -18,9 +18,9 @@ E:\Projects\CMS3506\StatementsSequences\StatementsSequences\bin\Debug\netcoreapp
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\bin\Debug\netcoreapp3.1\StatementsSequences.dll
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\bin\Debug\netcoreapp3.1\StatementsSequences.pdb
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.csprojAssemblyReference.cache
-E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.csproj.CoreCompileInputs.cache
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.AssemblyInfoInputs.cache
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.AssemblyInfo.cs
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.dll
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.pdb
 E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.genruntimeconfig.cache
+E:\Projects\CMS3506\StatementsSequences\StatementsSequences\obj\Debug\netcoreapp3.1\StatementsSequences.csproj.CoreCompileInputs.cache
