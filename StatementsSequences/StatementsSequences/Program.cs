@@ -10,7 +10,111 @@ namespace StatementsSequences
         static void Main(string[] args)
         {
 
-            Celcius();
+
+            Palindrome( );
+        }
+        static void Palindrome()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter word");
+                string word = Console.ReadLine();
+                string reverseWord = "";
+                for (int i = word.Length; i > 0; i--)
+                {
+                    reverseWord += word[i - 1].ToString();
+                }
+                if (reverseWord == word)
+                {
+                    Console.WriteLine("Palindrome");
+                }
+                else
+                {
+                    Console.WriteLine("Not Palindrome");
+                }
+            }
+         
+        }
+        static void ShortProgram()
+        {
+            while (true)
+            {
+                Console.WriteLine("Press 1 for palindrome, 2 to play game, 3 to exit");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)
+                {
+                    Console.WriteLine("Enter word to check palidrome");
+                    string word = Console.ReadLine();
+                    CheckPalindrome(word);
+                }
+                else if (choice == 2)
+                {
+                    Console.WriteLine("Guess random generated number in the range of 10 to 100");
+                    TooHighTooLow();
+                }
+                else { break; }
+            }
+        
+        }
+        static void CheckPalindrome(string word)
+        {
+            string reverseWord = "";
+            for (int i = word.Length; i > 0; i--)
+            {
+                reverseWord += word[i - 1].ToString();
+            }
+            if (reverseWord == word)
+            {
+                Console.WriteLine("Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Not Palindrome");
+            }
+        }
+        static void TooHighTooLow()
+        {
+
+            Random _random = new Random();
+            int num = _random.Next(10, 100);
+            int guess;
+
+            while (true)
+            {
+                Console.WriteLine("Enter Guessed Number");
+                guess = Convert.ToInt32(Console.ReadLine());
+                if (guess < num) { Console.WriteLine("Too low"); }
+                else if (guess > num) { Console.WriteLine("Too high"); }
+                else { Console.WriteLine("Correct"); break; }
+            }
+        }
+        static void PrintAlphabets()
+        {
+            int number = 66;
+            char ch = (char)number;
+            for (int i = 0; i < 26; i += 2)
+            {
+                ch = (char)number;
+                Console.WriteLine(ch);
+                number += 2;
+            }
+        }
+        static void NDiscount()
+        {
+            Console.WriteLine("Enter discount in percentage");
+
+            double NPercent = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter price");
+            double Price = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Final price");
+            Console.WriteLine(Price - (Price * NPercent / 100));
+        }
+
+        static void stackoverflow(out int a)
+        {
+            a = 2;
+            Console.WriteLine(a);
+
         }
 
         static void Celcius()
@@ -49,78 +153,15 @@ namespace StatementsSequences
             Console.WriteLine("Hello " + name);
         }
 
-        static void ShortProgram()
-        {
-            Console.WriteLine("Press 1 for palindrome, 2 to play game, 3 to exit");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            if (choice == 1)
-            {
-                Console.WriteLine("Enter word to check palidrome");
-                string word = Console.ReadLine();
-                CheckPalindrome(word);
-            }
-            else if (choice == 2)
-            {
-                Console.WriteLine("Guess random generated number in the range of 10 to 100");
-                TooHighTooLow();
-            }
-        }
 
-        static void CheckPalindrome(string word)
-        {
-            string reverseWord = "";
-            for (int i = word.Length; i > 0; i--)
-            {
-                reverseWord += word[i - 1].ToString();
-            }
-            if (reverseWord == word)
-            {
-                Console.WriteLine("Palindrome");
-            }
-            else
-            {
-                Console.WriteLine("Not Palindrome");
-            }
-        }
-        static void TooHighTooLow()
-        {
-            
-            Random _random = new Random();
-            int num = _random.Next(10, 100);
-            int guess;
 
-            while (true)
-            {
-                Console.WriteLine("Enter Guessed Number");
-                guess = Convert.ToInt32(Console.ReadLine());
-                if (guess < num) { Console.WriteLine("Too low"); }
-                else if (guess > num) { Console.WriteLine("Too high"); }
-                else { Console.WriteLine("Correct"); break; }
-            }
-        }
+
         static void Rectanlg()
         {
             Rectangle rect = new Rectangle(10, 20);
             Console.WriteLine("Area is " + rect.Area());
         }
-        static void Palindrome()
-        {
-            Console.WriteLine("Enter word");
-            string word = Console.ReadLine();
-            string reverseWord = "";
-            for (int i = word.Length; i > 0; i--) 
-            {
-                reverseWord += word[i-1].ToString();
-            }
-            if (reverseWord == word)  
-            {
-                Console.WriteLine("Palindrome");
-            }
-            else
-            {
-                Console.WriteLine("Not Palindrome");
-            }
-        }
+
         static void TimeOfDay()
         {
             Console.WriteLine("Enter hours, minutes, seconds");
@@ -216,17 +257,7 @@ namespace StatementsSequences
 
         }
 
-        static void PrintAlphabets()
-        {
-            int number = 65;
-            char ch = (char)number;
-            for (int i = 0; i < 26; i+=2)
-            {
-                ch = (char)number;
-                Console.WriteLine(ch);
-                number+=2;
-            }
-        }
+  
         static void PrintAlphabetsBackward()
         {
             int number = 90;
@@ -331,13 +362,7 @@ namespace StatementsSequences
             }
         }
 
-        static void NDiscount()
-        {
-            double NPercent = 50;
-            double Price = 10;
-
-            Console.WriteLine(Price - (Price * NPercent / 100));
-        }
+ 
 
         static void InputAverage()
         {
